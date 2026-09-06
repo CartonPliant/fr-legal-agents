@@ -1,0 +1,28 @@
+# French legal APIs for AI agents (x402, USDC on Base)
+
+Two HTTP APIs. POST JSON, pay USDC on Base, get the result. Offline compute. No INSEE/Sirene fetch. No scrape.
+
+## E-invoice calendar + L441-10 + checksums — $0.01
+
+Base: https://fr-legal-kit.monnet-yanis1.workers.dev
+Docs: https://fr-legal-kit.monnet-yanis1.workers.dev/llms.txt
+Manifest: https://fr-legal-kit.monnet-yanis1.workers.dev/.well-known/x402.json
+
+POST /v1/einvoice-who
+{"size":"micro"|"pme"|"eti"|"ge"}
+France 2026-09-01: all VAT-liable firms must RECEIVE e-invoices. GE/ETI must EMIT. PME/micro emit 2027-09-01.
+
+POST /v1/late-penalties
+{"amount_ht":1200,"days_late":18,"bce_refi_pct":2.15}
+
+POST /v1/check-siret  {"siret":"14 digits"}
+POST /v1/check-iban   {"iban":"FRxx..."}
+
+## Invoice/quote legal mention blocks — $0.02
+
+Base: https://fr-invoice-mentions.monnet-yanis1.workers.dev
+Docs: https://fr-invoice-mentions.monnet-yanis1.workers.dev/llms.txt
+POST /v1/mentions  seller facts → collable 293 B / L441-9 / L441-10 text.
+
+Pay: x402 exact USDC, network eip155:8453, facilitator https://facilitator.payai.network
+Human landing: https://cartonpliant.github.io/fr-legal-agents/

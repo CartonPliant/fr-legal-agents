@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APIs x402 pour agents — facture électronique 2026, mentions 293 B, L441-10</title>
+  <meta name="description" content="APIs payantes pour agents IA : calendrier facture électronique France (1er septembre 2026 / 2027), mentions obligatoires facture 293 B, pénalités L441-10, checksum SIRET/IBAN. 0,01–0,02 USDC sur Base. Pas d’INSEE, pas de scrape.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://cartonpliant.github.io/fr-legal-agents/">
+  <link rel="alternate" type="text/plain" href="./llms.txt">
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 44rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; }
+    code, pre { font-family: ui-monospace, monospace; font-size: 0.9em; }
+    pre { overflow: auto; padding: 0.75rem; border: 1px solid #8884; }
+    a { color: inherit; }
+    h1 { font-size: 1.4rem; }
+    .muted { opacity: 0.75; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <h1>APIs France pour agents IA (x402)</h1>
+  <p>Deux endpoints HTTP. L’agent envoie du JSON, paie <strong>0,01–0,02 USDC</strong> sur Base, reçoit le texte ou le calendrier. Calcul local, <strong>zéro appel INSEE</strong>.</p>
+
+  <h2>Facture électronique — qui doit quoi, depuis quand</h2>
+  <p>Depuis le <strong>1er septembre 2026</strong>, toutes les entreprises assujetties à la TVA doivent <strong>recevoir</strong> une facture électronique via une plateforme agréée. Les <strong>grandes entreprises et ETI émettent</strong> déjà ; PME, TPE et micro-entreprises émettent au <strong>1er septembre 2027</strong> (source : economie.gouv.fr).</p>
+  <pre>POST https://fr-legal-kit.monnet-yanis1.workers.dev/v1/einvoice-who
+{"size":"pme"}   →  receive now, emit 2027-09-01
+{"size":"eti"}   →  receive + emit now</pre>
+  <p class="muted">0,01 USDC · aussi <code>/v1/late-penalties</code> (L441-10), <code>/v1/check-siret</code>, <code>/v1/check-iban</code></p>
+
+  <h2>Mentions obligatoires facture / devis (293 B, L441-9)</h2>
+  <p>L’agent poste les faits vendeur (nom, SIRET, ville…). On rend des blocs <strong>collables</strong>. Pas de lookup SIRENE.</p>
+  <pre>POST https://fr-invoice-mentions.monnet-yanis1.workers.dev/v1/mentions
+{"legal_name":"…","siret":"14 digits","city":"…","tva_franchise_293b":true}</pre>
+  <p class="muted">0,02 USDC</p>
+
+  <h2>Pour les agents</h2>
+  <ul>
+    <li><a href="https://fr-legal-kit.monnet-yanis1.workers.dev/llms.txt">fr-legal-kit /llms.txt</a></li>
+    <li><a href="https://fr-legal-kit.monnet-yanis1.workers.dev/.well-known/x402.json">fr-legal-kit /.well-known/x402.json</a></li>
+    <li><a href="https://fr-invoice-mentions.monnet-yanis1.workers.dev/llms.txt">fr-invoice-mentions /llms.txt</a></li>
+    <li><a href="https://fr-invoice-mentions.monnet-yanis1.workers.dev/.well-known/agent-card.json">A2A agent-card</a></li>
+    <li><a href="./llms.txt">llms.txt de cette page</a></li>
+  </ul>
+  <p class="muted">Yanis Monnet EI · SIRET 933 984 056 00012 · pas un PDP, pas un conseil juridique. Isolation : ce n’est pas Devis d’abord, pas Fiche Pleine, pas Ibis.</p>
+</body>
+</html>
