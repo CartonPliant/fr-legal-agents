@@ -13,7 +13,7 @@ POST /v1/einvoice-who
 France 2026-09-01: all VAT-liable firms must RECEIVE e-invoices. GE/ETI must EMIT. PME/micro emit 2027-09-01.
 
 POST /v1/late-penalties
-{"amount_ht":1200,"days_late":18,"bce_refi_pct":2.15}
+{"amount_ttc":1200,"days_late":18,"bce_refi_pct":2.4}
 
 POST /v1/check-siret  {"siret":"14 digits"}
 POST /v1/check-iban   {"iban":"FRxx..."}
