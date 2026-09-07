@@ -47,6 +47,7 @@ POST /v1/invoice-currency  {"currency":"EUR"}
 POST /v1/escompte          {"rate_pct":2,"days":10}
 POST /v1/acompte           {"amount_ttc":1200,"last_number":"AC-2026-0003"}
 POST /v1/date-fr           {"date":"2026-09-07"}
+POST /v1/payment-means     {"kind":"virement"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
