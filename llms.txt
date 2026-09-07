@@ -73,6 +73,8 @@ POST /v1/export            {"kind":"extra_eu"}
 POST /v1/proforma          {"number":"PF-2026-001"}
 POST /v1/jours-francs      {"from":"2026-09-07","days":8}
 POST /v1/clause-penale     {"amount_eur":150}
+POST /v1/periode           {"from":"2026-09-01","to":"2026-09-30"}
+POST /v1/autofacturation   {"seller":"ACME SAS"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
