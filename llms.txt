@@ -35,6 +35,7 @@ POST /v1/ht-ttc            {"amount_ht":100,"rate":"standard"}
 POST /v1/days-late         {"due_date":"2026-09-07","as_of":"2026-09-25"}
 POST /v1/siren-from-siret  {"siret":"44306184100047"}
 POST /v1/quote-validity    {"quote_date":"2026-09-07","validity_days":30}
+POST /v1/ape-naf           {"code":"62.01Z"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
