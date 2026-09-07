@@ -42,6 +42,7 @@ POST /v1/iban-fr           {"iban":"FR1420041010050500013M02606"}
 POST /v1/credit-note       {"original_number":"F-2026-0042","last_avoir":"AV-2026-0007","amount_ht":100}
 POST /v1/phone-fr          {"phone":"06 12 34 56 78"}
 POST /v1/capital-social    {"form":"sas","amount_eur":1000}
+POST /v1/rcs-mention       {"city":"Pau","siren":"404833048"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
