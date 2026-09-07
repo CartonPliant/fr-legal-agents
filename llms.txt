@@ -19,6 +19,8 @@ POST /v1/check-siret  {"siret":"14 digits"}
 POST /v1/check-iban   {"iban":"FRxx..."}
 POST /v1/due-date     {"invoice_date":"2026-04-01","net_days":30}
 POST /v1/tva-rate     {"rate":"standard"}
+POST /v1/holidays     {"year":2026}
+POST /v1/payment-term-max  {"invoice_date":"2026-09-07"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
