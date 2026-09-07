@@ -37,6 +37,7 @@ POST /v1/siren-from-siret  {"siret":"44306184100047"}
 POST /v1/quote-validity    {"quote_date":"2026-09-07","validity_days":30}
 POST /v1/ape-naf           {"code":"62.01Z"}
 POST /v1/postcode-fr       {"postcode":"67000"}
+POST /v1/legal-form        {"form":"sas"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
