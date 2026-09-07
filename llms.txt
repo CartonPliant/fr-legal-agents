@@ -61,6 +61,7 @@ POST /v1/unit              {"kind":"jour","qty":8}
 POST /v1/cgv               {"url":"https://example.com/cgv"}
 POST /v1/reserve-propriete {"kind":"goods"}
 POST /v1/garantie-legale   {"delivery_date":"2026-09-07"}
+POST /v1/mediateur         {"name":"CNPM","url":"https://www.cnpm-mediation-consommation.eu"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
