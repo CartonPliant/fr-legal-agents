@@ -55,6 +55,7 @@ POST /v1/doc-title         {"kind":"facture","number":"F-2026-0042"}
 POST /v1/autoliquidation   {"kind":"intra_eu"}
 POST /v1/eori              {"siren":"404833048"}
 POST /v1/duplicata         {"original_number":"F-2026-0042"}
+POST /v1/rm-mention        {"city":"Pau","siren":"404833048"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
