@@ -32,6 +32,7 @@ POST /v1/amount-words      {"amount_eur":12.4}
 POST /v1/alsace-holidays   {"year":2026}
 POST /v1/due-date-eom      {"invoice_date":"2026-09-07"}
 POST /v1/ht-ttc            {"amount_ht":100,"rate":"standard"}
+POST /v1/days-late         {"due_date":"2026-09-07","as_of":"2026-09-25"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
