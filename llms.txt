@@ -90,4 +90,8 @@ Docs: https://fr-invoice-mentions.monnet-yanis1.workers.dev/llms.txt
 POST /v1/mentions  seller facts → collable 293 B / L441-9 / L441-10 text.
 
 Pay: x402 exact USDC, network eip155:8453, facilitator https://facilitator.payai.network
+MCP registry: io.github.CartonPliant/fr-legal-kit
+MCP URL: https://fr-legal-kit.monnet-yanis1.workers.dev/mcp
+x402scan: https://www.x402scan.com/server/edab7902-3c37-4463-97ef-fa115c225b8d
+AgentCash: npx agentcash add https://fr-legal-kit.monnet-yanis1.workers.dev
 Human landing: https://cartonpliant.github.io/fr-legal-agents/
