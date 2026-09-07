@@ -65,6 +65,8 @@ POST /v1/mediateur         {"name":"CNPM","url":"https://www.cnpm-mediation-cons
 POST /v1/delivery          {"invoice_date":"2026-09-07","delivery_date":"2026-09-10"}
 POST /v1/line              {"description":"Audit comptable","qty":8,"kind":"jour","unit_ht":450}
 POST /v1/page              {"current":1,"total":2}
+POST /v1/retractation      {"contract_date":"2026-09-07","kind":"services"}
+POST /v1/conservation      {"invoice_date":"2026-09-07"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
