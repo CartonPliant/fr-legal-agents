@@ -51,6 +51,7 @@ POST /v1/payment-means     {"kind":"virement"}
 POST /v1/interest-start    {"due_date":"2026-09-07"}
 POST /v1/siege-social      {"street":"12 rue des Pyrénées","postcode":"64000","city":"Pau"}
 POST /v1/net-a-payer       {"amount_ht":1000,"rate":"standard"}
+POST /v1/doc-title         {"kind":"facture","number":"F-2026-0042"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
