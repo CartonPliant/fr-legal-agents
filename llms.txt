@@ -26,6 +26,7 @@ POST /v1/vat-key           {"siren":"404833048"}
 POST /v1/penalty-text      {"bce_refi_pct":2.4}
 POST /v1/franchise-293b    {"activity":"services","ca_n1_eur":20000}
 POST /v1/dunning-steps     {"due_date":"2026-09-07"}
+POST /v1/open-days         {"from":"2026-04-03","to":"2026-04-07"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
