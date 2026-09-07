@@ -49,6 +49,7 @@ POST /v1/acompte           {"amount_ttc":1200,"last_number":"AC-2026-0003"}
 POST /v1/date-fr           {"date":"2026-09-07"}
 POST /v1/payment-means     {"kind":"virement"}
 POST /v1/interest-start    {"due_date":"2026-09-07"}
+POST /v1/siege-social      {"street":"12 rue des Pyrénées","postcode":"64000","city":"Pau"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
