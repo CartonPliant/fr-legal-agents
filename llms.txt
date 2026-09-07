@@ -71,6 +71,8 @@ POST /v1/prescription      {"due_date":"2026-09-07","buyer":"b2b"}
 POST /v1/garantie-commerciale {"months":12,"delivery_date":"2026-09-07"}
 POST /v1/export            {"kind":"extra_eu"}
 POST /v1/proforma          {"number":"PF-2026-001"}
+POST /v1/jours-francs      {"from":"2026-09-07","days":8}
+POST /v1/clause-penale     {"amount_eur":150}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
