@@ -21,6 +21,9 @@ POST /v1/due-date     {"invoice_date":"2026-04-01","net_days":30}
 POST /v1/tva-rate     {"rate":"standard"}
 POST /v1/holidays     {"year":2026}
 POST /v1/payment-term-max  {"invoice_date":"2026-09-07"}
+POST /v1/mention-fields    {"kind":"facture","tva_franchise_293b":true}
+POST /v1/vat-key           {"siren":"404833048"}
+POST /v1/penalty-text      {"bce_refi_pct":2.4}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02

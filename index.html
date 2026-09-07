@@ -30,7 +30,7 @@
   <pre>POST https://fr-legal-kit.monnet-yanis1.workers.dev/v1/einvoice-who
 {"size":"pme"}   →  receive now, emit 2027-09-01
 {"size":"eti"}   →  receive + emit now</pre>
-  <p class="muted">0,01 USDC · aussi <code>/v1/late-penalties</code>, <code>/v1/due-date</code>, <code>/v1/holidays</code> (L.3133-1, Pâques 6 avr 2026), <code>/v1/payment-term-max</code> (plafond 60 j / 45 j fin de mois), <code>/v1/tva-rate</code>, <code>/v1/check-siret</code>, <code>/v1/check-iban</code>, MCP <code>POST /mcp</code></p>
+  <p class="muted">0,01 USDC · aussi <code>/v1/late-penalties</code>, <code>/v1/due-date</code>, <code>/v1/holidays</code> (L.3133-1, Pâques 6 avr 2026), <code>/v1/payment-term-max</code> (plafond 60 j / 45 j fin de mois), <code>/v1/mention-fields</code>, <code>/v1/vat-key</code> (TVA FR depuis SIREN, CGI 286 ter), <code>/v1/penalty-text</code> (mentions L441-10 collables), <code>/v1/tva-rate</code>, <code>/v1/check-siret</code>, <code>/v1/check-iban</code>, MCP <code>POST /mcp</code></p>
 
   <h2>Mentions obligatoires facture / devis (293 B, L441-9)</h2>
   <p>L’agent poste les faits vendeur (nom, SIRET, ville…). On rend des blocs <strong>collables</strong>. Pas de lookup SIRENE.</p>
