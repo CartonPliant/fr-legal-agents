@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>APIs x402 pour agents — facture électronique 2026, mentions 293 B, L441-10</title>
-  <meta name="description" content="APIs payantes pour agents IA : calendrier facture électronique France (1er septembre 2026 / 2027), mentions obligatoires facture 293 B, pénalités L441-10, checksum SIRET/IBAN. 0,01–0,02 USDC sur Base. Pas d’INSEE, pas de scrape.">
+  <title>APIs x402 pour agents — prix token Base, gas, ENS, facture électronique 2026</title>
+  <meta name="description" content="APIs payantes pour agents IA : prix token Base (Uniswap v3), gas EIP-1559, ENS, calendrier facture électronique France. 0,01–0,02 USDC sur Base. Pas de CoinGecko, pas d’INSEE.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://cartonpliant.github.io/fr-legal-agents/">
   <link rel="alternate" type="text/plain" href="./llms.txt">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebAPI","name":"fr-legal-kit","url":"https://fr-legal-kit.monnet-yanis1.workers.dev","description":"x402 APIs for French e-invoice calendar, L441-10 penalties, SIRET/IBAN checksums.","provider":{"@type":"Person","name":"Yanis Monnet","identifier":"SIRET 93398405600012"}}
+  {"@context":"https://schema.org","@type":"WebAPI","name":"fr-legal-kit","url":"https://fr-legal-kit.monnet-yanis1.workers.dev","description":"x402 APIs for Base token USD, Base gas, ENS resolve, plus French e-invoice helpers.","provider":{"@type":"Person","name":"Yanis Monnet","identifier":"SIRET 93398405600012"}}
   </script>
   <style>
     :root { color-scheme: light dark; }
@@ -22,8 +22,19 @@
   </style>
 </head>
 <body>
-  <h1>APIs France pour agents IA (x402)</h1>
-  <p>Deux endpoints HTTP. L’agent envoie du JSON, paie <strong>0,01–0,02 USDC</strong> sur Base, reçoit le texte ou le calendrier. Calcul local, <strong>zéro appel INSEE</strong>.</p>
+  <h1>APIs x402 pour agents IA</h1>
+  <p>L’agent envoie du JSON, paie <strong>0,01 USDC</strong> sur Base. Commencer par le prix token / le gas — ce que les wallets paient déjà.</p>
+
+  <h2>Prix token Base, gas, ENS</h2>
+  <pre>POST https://fr-legal-kit.monnet-yanis1.workers.dev/v1/base-price
+{"token":"WETH"}   →  usd, pool Uniswap v3, quote USDC
+
+POST https://fr-legal-kit.monnet-yanis1.workers.dev/v1/base-gas
+{}                 →  base fee EIP-1559, tips, coût 21k
+
+POST https://fr-legal-kit.monnet-yanis1.workers.dev/v1/base-ens
+{"name":"vitalik.eth"}  →  0x</pre>
+  <p class="muted">0,01 USDC · pas de clé CoinGecko · <code>npx agentcash add https://fr-legal-kit.monnet-yanis1.workers.dev</code></p>
 
   <h2>Facture électronique — qui doit quoi, depuis quand</h2>
   <p>Depuis le <strong>1er septembre 2026</strong>, toutes les entreprises assujetties à la TVA doivent <strong>recevoir</strong> une facture électronique via une plateforme agréée. Les <strong>grandes entreprises et ETI émettent</strong> déjà ; PME, TPE et micro-entreprises émettent au <strong>1er septembre 2027</strong> (source : economie.gouv.fr).</p>

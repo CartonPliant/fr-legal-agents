@@ -1,12 +1,27 @@
-# French legal APIs for AI agents (x402, USDC on Base)
+# x402 APIs for AI agents (USDC on Base)
 
-Two HTTP APIs. POST JSON, pay USDC on Base, get the result. Offline compute. No INSEE/Sirene fetch. No scrape.
+POST JSON, pay $0.01 USDC on Base, get the result. Start with token price / gas (funded wallets already buy those).
 
-## E-invoice calendar + L441-10 + checksums — $0.01
+## Base price + gas + ENS — $0.01
 
 Base: https://fr-legal-kit.monnet-yanis1.workers.dev
 Docs: https://fr-legal-kit.monnet-yanis1.workers.dev/llms.txt
 Manifest: https://fr-legal-kit.monnet-yanis1.workers.dev/.well-known/x402.json
+x402scan: https://www.x402scan.com/server/edab7902-3c37-4463-97ef-fa115c225b8d
+
+POST /v1/base-price
+{"token":"WETH"|"USDC"|"cbBTC"|0x…}
+Uniswap v3 spot USD vs USDC on Base. No CoinGecko key.
+
+POST /v1/base-gas
+{}
+EIP-1559 base fee + tips + 21k transfer cost.
+
+POST /v1/base-ens
+{"name":"vitalik.eth"}
+ENS L1 forward resolve.
+
+## E-invoice calendar + L441-10 + checksums — $0.01
 
 POST /v1/einvoice-who
 {"size":"micro"|"pme"|"eti"|"ge"}
