@@ -77,6 +77,8 @@ POST /v1/periode           {"from":"2026-09-01","to":"2026-09-30"}
 POST /v1/autofacturation   {"seller":"ACME SAS"}
 POST /v1/rgpd              {"controller":"Yanis Monnet EI"}
 POST /v1/langue            {"buyer":"b2c"}
+POST /v1/commande          {"number":"BC-42","date":"2026-09-01"}
+POST /v1/debours           {"amount_eur":80,"label":"timbre fiscal"}
 MCP POST /mcp  (tools/list free; tools/call $0.01)
 
 ## Invoice/quote legal mention blocks — $0.02
